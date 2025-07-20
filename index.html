@@ -35,6 +35,17 @@
       color: white;
       border-radius: 8px;
       margin-bottom: 30px;
+      position: relative;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
     }
 
     h1 {
@@ -83,6 +94,42 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-title {
+      margin: 0 0 10px;
+    }
+
+    .blog-post {
+      margin-bottom: 20px;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -91,6 +138,7 @@
 
   <div class="container">
     <header>
+      <img src="https://i.pravatar.cc/150 " alt="Yamu Profile" class="profile-pic">
       <h1>Hi, I'm Yamuna 👋</h1>
       <p><strong>Test Lead | SDET | QA Automation Engineer</strong><br>
       11+ years of experience building test automation frameworks using Java, REST Assured, Selenium, JMeter, and AWS.</p>
@@ -112,12 +160,48 @@
 
     <div class="section">
       <h2>📁 Projects</h2>
-      <ul>
-        <li><strong>REST Assured API Automation Framework</strong> – Built a modular framework for end-to-end API testing.</li>
-        <li><strong>Selenium + TestNG Framework</strong> – Developed a scalable UI automation suite with reporting and parallel execution.</li>
-        <li><strong>JMeter Performance Test</strong> – Designed and executed performance tests for high-traffic APIs.</li>
-        <li><strong>AWS-based Test Environment</strong> – Set up EC2 instances with Jenkins and automated deployment pipelines.</li>
-      </ul>
+      <div class="project-gallery">
+        <div class="project-card">
+          <h3 class="project-title">REST Assured API Automation</h3>
+          <p>Built a modular framework for end-to-end API testing.</p>
+          <a href="https://github.com/QaYamu/api-framework " target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">Selenium + TestNG Framework</h3>
+          <p>Developed a scalable UI automation suite with reporting and parallel execution.</p>
+          <a href="https://github.com/QaYamu/ui-framework " target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">JMeter Performance Test</h3>
+          <p>Designed and executed performance tests for high-traffic APIs.</p>
+          <a href="https://github.com/QaYamu/performance-tests " target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">AWS-based Test Environment</h3>
+          <p>Set up EC2 instances with Jenkins and automated deployment pipelines.</p>
+          <a href="https://github.com/QaYamu/aws-tests " target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📄 Resume</h2>
+      <p>Download my full resume below:</p>
+      <a href="Yamu_Resume.pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+
+    <div class="section">
+      <h2>📚 My Blog</h2>
+      <div class="blog-post">
+        <h3>How to Build a REST Assured Framework</h3>
+        <p>In this post, I explain how to build a scalable API automation framework using Java and REST Assured.</p>
+        <a href="https://example.com/blog1 " target="_blank">Read More</a>
+      </div>
+      <div class="blog-post">
+        <h3>Using AWS for QA Automation</h3>
+        <p>Learn how to set up a test environment on AWS and automate deployment pipelines.</p>
+        <a href="https://example.com/blog2 " target="_blank">Read More</a>
+      </div>
     </div>
 
     <div class="section">
