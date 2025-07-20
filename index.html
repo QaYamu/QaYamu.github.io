@@ -3,56 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - QA Engineer</title>
+  <title>Yamu | QA Engineer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #3498db; text-decoration: none; }
-    .section { margin-bottom: 30px; }
+    :root {
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+      --accent-color: #0077cc;
+      --card-bg: #ffffff;
+      --dark-bg: #121212;
+      --dark-text: #f1f1f1;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .section {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f1f1f1;
+      --card-bg: #2c2c2c;
+    }
+
+    .dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <div class="section">
-    <h1>Hi, I'm Your Name 👋</h1>
-    <p>I'm a <strong>Test Lead</strong> with 7+ years of experience in <strong>Test Automation, API Testing, and DevOps</strong>. I build scalable automation frameworks using Java, REST Assured, Selenium, and AWS.</p>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <div class="container">
+    <header>
+      <h1>Hi, I'm Yamu 👋</h1>
+      <p><strong>Test Lead | SDET | QA Automation Engineer</strong><br>
+      11+ years of experience building test automation frameworks using Java, REST Assured, Selenium, JMeter, and AWS.</p>
+    </header>
+
+    <div class="section">
+      <h2>🔧 Skills</h2>
+      <ul>
+        <li>Java (OOPs, Collections, Multithreading)</li>
+        <li>REST Assured (API Testing)</li>
+        <li>Selenium WebDriver (Page Object Model)</li>
+        <li>TestNG & JUnit</li>
+        <li>JMeter (Performance Testing)</li>
+        <li>AWS (EC2, S3, Lambda, CodePipeline)</li>
+        <li>CI/CD (Jenkins, GitHub Actions)</li>
+        <li>JavaScript (ES6+, Node.js)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📁 Projects</h2>
+      <ul>
+        <li><strong>REST Assured API Automation Framework</strong> – Built a modular framework for end-to-end API testing.</li>
+        <li><strong>Selenium + TestNG Framework</strong> – Developed a scalable UI automation suite with reporting and parallel execution.</li>
+        <li><strong>JMeter Performance Test</strong> – Designed and executed performance tests for high-traffic APIs.</li>
+        <li><strong>AWS-based Test Environment</strong> – Set up EC2 instances with Jenkins and automated deployment pipelines.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🛠 Tools & Technologies</h2>
+      <p>Postman, Git, GitHub, Jenkins, Docker, Allure Reports, ExtentReports, Jira, Zephyr</p>
+    </div>
+
+    <div class="section">
+      <h2>📬 Contact Me</h2>
+      <p>Email: <a href="mailto:yamu@example.com">yamu@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile " target="_blank">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="https://github.com/QaYamu " target="_blank">github.com/QaYamu</a></p>
+    </div>
+
+    <footer>
+      &copy; 2025 Yamu | QA Engineer
+    </footer>
   </div>
 
-  <div class="section">
-    <h2>🔧 Skills</h2>
-    <ul>
-      <li>Java (OOPs, Collections, Multithreading)</li>
-      <li>REST Assured (API Testing)</li>
-      <li>Selenium WebDriver (Page Object Model)</li>
-      <li>TestNG & JUnit</li>
-      <li>JMeter (Performance Testing)</li>
-      <li>AWS (EC2, S3, Lambda, CodePipeline)</li>
-      <li>CI/CD (Jenkins, GitHub Actions)</li>
-      <li>JavaScript (ES6+, Node.js)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>📁 Projects</h2>
-    <ul>
-      <li><strong>REST Assured API Automation Framework</strong> – Built a modular framework for end-to-end API testing.</li>
-      <li><strong>Selenium + TestNG Framework</strong> – Developed a scalable UI automation suite with reporting and parallel execution.</li>
-      <li><strong>JMeter Performance Test</strong> – Designed and executed performance tests for high-traffic APIs.</li>
-      <li><strong>AWS-based Test Environment</strong> – Set up EC2 instances with Jenkins and automated deployment pipelines.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🛠 Tools & Technologies</h2>
-    <p>Postman, Git, GitHub, Jenkins, Docker, Allure Reports, ExtentReports, Jira, Zephyr</p>
-  </div>
-
-  <div class="section">
-    <h2>📬 Contact Me</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile " target="_blank">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername " target="_blank">github.com/yourusername</a></p>
-  </div>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
 </body>
 </html>
